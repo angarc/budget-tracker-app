@@ -8,9 +8,6 @@ import {
   Link
 } from "react-router-dom";
 import { Navbar, Nav, Container } from 'react-bootstrap'
-
-
-
 import { HomePage, RegisterPage, LoginPage } from './pages/'
 
 function App() {
