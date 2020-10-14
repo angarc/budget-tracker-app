@@ -10,8 +10,8 @@ import {
 import { Navbar, Nav, Container } from 'react-bootstrap'
 
 
-import HomePage from './pages/HomePage/HomePage'
-import RegisterPage from './pages/RegisterPage/RegisterPage'
+
+import { HomePage, RegisterPage, LoginPage } from './pages/'
 
 function App() {
   return (
@@ -38,7 +38,7 @@ function App() {
             <RegisterPage/>
           </Route>
           <Route path="/login">
-            <h1>Login</h1>
+            <LoginPage />
           </Route>
           <Route path="/">
             <HomePage />
