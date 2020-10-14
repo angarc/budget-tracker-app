@@ -1,7 +1,6 @@
 import React from 'react'
 import { Container, Form, Button } from 'react-bootstrap'
-import { RAILS_URI } from '../../endpoints.js'
-import axios from 'axios'
+import { registerUser } from '../../requests/UserRequests'
 
 class RegisterPage extends React.Component {
   constructor(props) {
@@ -19,31 +18,14 @@ class RegisterPage extends React.Component {
 
   submit(evt) {
     evt.preventDefault();
-    const formData = {
-      user: {
-        first_name: this.state.firstName,
-        last_name: this.state.lastName,
-        email: this.state.email,
-        username: this.state.username,
-        password: this.state.password,
-        passwordConfirmation: this.state.passwordConfirmation
-      }
-    }
-    axios.post(`${RAILS_URI}users`, formData)
-    .then(response => {
-      if (response.status === 200) {
-        const authData = {
-          auth: {
-            email: this.state.email,
-            password: this.state.password
-          }
-        }
-        axios.post(`${RAILS_URI}user_token`, authData)
-        .then(tokenResponse => {
-          //console.log(tokenResponse.data.jwt);
-        })
-      }
-    })
+    registerUser(
+      this.state.firstName, 
+      this.state.lastName, 
+      this.state.email, 
+      this.state.username, 
+      this.state.password, 
+      this.state.passwordConfirmation
+    )
   }
 
   render() {
