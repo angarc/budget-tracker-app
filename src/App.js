@@ -37,6 +37,9 @@ function App() {
           <Route path="/login">
             <LoginPage />
           </Route>
+          <Route path="/dashboard">
+            <h1>Dashboard</h1>
+          </Route>
           <Route path="/">
             <HomePage />
           </Route>

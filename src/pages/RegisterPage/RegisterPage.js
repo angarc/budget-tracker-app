@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Form, Button } from 'react-bootstrap'
 import { registerUser } from '../../requests/UserRequests'
+import { Redirect } from 'react-router-dom'
 
 class RegisterPage extends React.Component {
   constructor(props) {
@@ -12,7 +13,8 @@ class RegisterPage extends React.Component {
       email: "",
       username: "",
       password: "",
-      passwordConfirmation: ""
+      passwordConfirmation: "",
+      redirect: false
     }
   }
 
@@ -26,6 +28,13 @@ class RegisterPage extends React.Component {
       this.state.password, 
       this.state.passwordConfirmation
     )
+    .then(_ => {
+      this.setState({redirect: true})
+    })
+    .catch(error => {
+      alert(error)
+    })
+
   }
 
   render() {
@@ -65,6 +74,7 @@ class RegisterPage extends React.Component {
             <Form.Control onChange={(evt) => this.setState({passwordConfirmation: evt.target.value})} type="password" placeholder="Confirm Your Password" value={this.state.passwordConfirmation}/>
           </Form.Group>
 
+          {this.state.redirect && <Redirect to="/dashboard" />}
           <Button onClick={(evt) => this.submit(evt)} type="submit" variant="primary">
             Create My Account
           </Button> 
