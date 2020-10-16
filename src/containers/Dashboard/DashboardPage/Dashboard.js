@@ -1,14 +1,14 @@
 import React from 'react'
-import DashboardNavbar from '../../../components/DashboardNavbar/DashboardNavbar'
 import { Route } from 'react-router-dom'
 
-import { GeneralBudgetPage } from '../../../DashboardPages'
+import { Navbar } from '../../../components/Dashboard/'
+import { GeneralBudgetPage } from '../../../pages/Dashboard/'
 
 class Dashboard extends React.Component {
   render() {
     return (
       <div>
-        <DashboardNavbar/>
+        <Navbar/>
         <Route path='/dashboard/general-budget'>
           <GeneralBudgetPage/>
         </Route>

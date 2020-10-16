@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Form, Button } from 'react-bootstrap'
-import { registerUser } from '../../requests/UserRequests'
+import { registerUser } from '../../../requests/UserRequests'
 import { Redirect } from 'react-router-dom'
 
 class RegisterPage extends React.Component {

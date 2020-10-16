@@ -8,9 +8,9 @@ import {
   Link
 } from "react-router-dom";
 
-import { HomePage, RegisterPage, LoginPage } from './pages/'
-import FrontendNavbar from './components/FrontendNavbar/FrontendNavbar'
-import Dashboard from './containers/Dashboard/DashboardPage/Dashboard'
+import { HomePage, RegisterPage, LoginPage } from './pages/Frontend'
+import { Dashboard } from './containers/Dashboard/'
+import { Navbar } from './components/Frontend/'
 
 function App() {
   return (
@@ -18,18 +18,18 @@ function App() {
      <div>
         <Switch>
           <Route path="/register">
-            <FrontendNavbar/>
+            <Navbar/>
             <RegisterPage/>
           </Route>
           <Route path="/login">
-            <FrontendNavbar/>
+            <Navbar/>
             <LoginPage />
           </Route>
 
           <Route path="/dashboard" component={Dashboard}/>
 
           <Route path="/">
-            <FrontendNavbar/>
+            <Navbar/>
             <HomePage />
           </Route>
         </Switch>

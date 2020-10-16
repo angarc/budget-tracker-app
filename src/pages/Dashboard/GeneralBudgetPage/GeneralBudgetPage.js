@@ -1,8 +1,8 @@
 import React from 'react'
 import { Container, Row, Col, Card } from 'react-bootstrap'
 
-import { BudgetCategoryCard, PageTitle } from '../../components/Dashboard/'
-import { BudgetExpenseWidget } from '../../containers/Dashboard/'
+import { BudgetCategoryCard, PageTitle } from '../../../components/Dashboard/'
+import { BudgetExpenseWidget } from '../../../containers/Dashboard/'
 
 const categories = [
   {

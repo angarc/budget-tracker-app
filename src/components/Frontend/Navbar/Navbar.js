@@ -2,7 +2,7 @@ import React from 'react'
 import { Navbar, Nav, Container } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
-const frontendNavbar = () => {
+const navbar = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -23,4 +23,4 @@ const frontendNavbar = () => {
   )
 }
 
-export default frontendNavbar
+export default navbar

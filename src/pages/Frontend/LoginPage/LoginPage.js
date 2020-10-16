@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Form, Button } from 'react-bootstrap'
-import { loginUser } from '../../requests/UserRequests'
+import { loginUser } from '../../../requests/UserRequests'
 import { Redirect } from 'react-router-dom'
 
 class LoginPage extends React.Component {

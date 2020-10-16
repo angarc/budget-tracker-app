@@ -2,7 +2,7 @@ import React from 'react'
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
-const dashboardNavbar = () => {
+const navbar = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Navbar.Brand><Link to="/dashboard">Dashboard</Link></Navbar.Brand>
@@ -23,4 +23,4 @@ const dashboardNavbar = () => {
   )
 }
 
-export default dashboardNavbar
+export default navbar 
