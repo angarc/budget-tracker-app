@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col, Form, Button } from 'react-bootstrap'
+import { Row, Col, Form, Button, Card } from 'react-bootstrap'
 import { BudgetCategoryCard, BudgetCategoryItemList } from '../../../components/Dashboard/'
 import { BudgetCategoryItemForm } from '../../../containers/Dashboard/'
 
@@ -42,7 +42,7 @@ class BudgetExpenseWidget extends React.Component {
       <div>
         <Row>
           <Col lg={3}>
-            <h2>Expenses</h2>
+            <h2>Expenses: </h2>
             <hr/>
             {this.props.categories.map(category => {
               return <BudgetCategoryCard onClick={() => this.categorySelected(category)} title={category.title}/>

@@ -20,6 +20,12 @@ const categories = [
         title: "Insurance",
         frequency: "Monthly",
         amount: 250
+      },
+      {
+        id: 4,
+        title: "Furniture",
+        frequency: "Annually",
+        amount: 1000
       }
     ]
   },
