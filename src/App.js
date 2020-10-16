@@ -7,8 +7,10 @@ import {
   Route,
   Link
 } from "react-router-dom";
+
 import { HomePage, RegisterPage, LoginPage } from './pages/'
 import FrontendNavbar from './components/FrontendNavbar/FrontendNavbar'
+import Dashboard from './containers/Dashboard/DashboardPage/Dashboard'
 
 function App() {
   return (
@@ -23,9 +25,9 @@ function App() {
             <FrontendNavbar/>
             <LoginPage />
           </Route>
-          <Route path="/dashboard">
-            <h1>Dashboard</h1>
-          </Route>
+
+          <Route path="/dashboard" component={Dashboard}/>
+
           <Route path="/">
             <FrontendNavbar/>
             <HomePage />
